@@ -1,8 +1,6 @@
 # fsd-final-certification
 FSD final certification
 
-Testing web hook
-
 ### Executing the Application
 
 - Without Docker
