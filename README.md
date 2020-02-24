@@ -1,8 +1,6 @@
 # fsd-final-certification
 FSD final certification
 
-webhook test
-
 ### Executing the Application
 
 - Without Docker
