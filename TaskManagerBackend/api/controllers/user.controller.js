@@ -10,7 +10,7 @@ exports.list_users = function (req, res) {
 
 exports.get_user = function (req, res) {
     userSchema.findById(req.params.id, function (err, docs) {
-        cosole.log('inside get users');
+        console.log('inside get users');
         if (err) { logger.error(err); res.status(500).json({ msg: 'Something broke!', err: err }); }
         res.json(docs);
     });
