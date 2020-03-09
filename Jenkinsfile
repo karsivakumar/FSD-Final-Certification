@@ -1,4 +1,7 @@
 pipeline {
+     environment {
+        PATH = "$PATH:C:\Program Files\Docker Toolbox"
+    }
     agent any
 
     stages {
