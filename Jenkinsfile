@@ -1,7 +1,15 @@
 pipeline {
     agent any
-
+       environment {
+       color = "blue"
+   }
     stages {
+               stage('first') {
+            agent { label 'master' }
+            steps {
+               bat('set')
+            }
+        }
         stage('Build Task Manager Frontend') {
             steps {
                 echo 'Building Task Manager Frontend..'
