@@ -31,6 +31,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
+                echo $PATH
                 bat 'docker-compose up --build -d'
             }
         }
