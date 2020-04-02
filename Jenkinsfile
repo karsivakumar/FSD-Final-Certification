@@ -4,6 +4,12 @@ pipeline {
        color = "blue"
    }
     stages {
+        stage('GIT checkout') {
+            steps {
+                echo 'Checkout from SCM'
+                git 'https://github.com/karsivakumar/FSD-Final-Certification'
+            }
+        }
         stage('Build Task Manager Frontend') {
             steps {
                 echo 'Building Task Manager Frontend..'
