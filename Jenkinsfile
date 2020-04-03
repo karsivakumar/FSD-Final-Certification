@@ -36,6 +36,12 @@ pipeline {
 //                bat 'cd ./TaskManagerBackend/ && npm test'
 //            }
 //        }
+    stage('path') {
+            agent { label 'master' }
+            steps {
+               bat('set')
+            }
+        }
     stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
