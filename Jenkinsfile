@@ -38,6 +38,8 @@ pipeline {
 //        }
         stage('Deploy') {
             steps {
+                echo 'display path...'
+                bat('set')
                 echo 'Deploying the application...'
                 bat 'docker-compose up --build -d'
             }
