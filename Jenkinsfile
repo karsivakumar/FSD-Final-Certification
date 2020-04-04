@@ -41,7 +41,7 @@ pipeline {
                 echo 'display path...'
                 bat('set')
                 echo 'Deploying the application...'
-                bat 'docker-compose up --build -d'
+                bat 'dockerx up --build -d'
             }
         }
     }
