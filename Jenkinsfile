@@ -4,12 +4,6 @@ pipeline {
        color = "blue"
    }
     stages {
-        stage('path') {
-            agent { label 'master' }
-            steps {
-               bat('set')
-            }
-        }    
         stage('GIT checkout') {
             steps {
                 echo 'Checkout from SCM'
@@ -45,7 +39,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
-                bat 'dockerx ps -a'
+                bat 'docker-compose up --build -d'
             }
         }
     }
