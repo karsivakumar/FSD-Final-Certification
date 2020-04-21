@@ -12,8 +12,6 @@ services:
     container_name: taskmanager-backend
     restart: always
     build: ./TaskManagerBackend/
-    volumes:
-      - ./:/app
     ports:
       - "3000:3000"
     links:
